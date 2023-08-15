@@ -31,6 +31,7 @@ describe('CaixaDaLanchonete', () => {
         ['dinheiro', 'R$ 33,73', ['cafe,4', 'sanduiche,3', 'queijo,2']],
         ['credito', 'R$ 36,56', ['cafe,4', 'sanduiche,3', 'queijo,2']],
         ['debito', 'R$ 35,50', ['cafe,4', 'sanduiche,3', 'queijo,2']],
+        ['debito', 'R$ 41,50', ['cafe,4', 'sanduiche,3', 'queijo,2', 'chantily,2', 'chantily,2']],
         ['debito', 'R$ 45,00', ['cafe,4', 'sanduiche,3', 'queijo,2', 'combo1,1']],
         ['debito', 'R$ 21,50', ['cafe,4', 'combo1,1']],
         ['dinheiro', 'R$ 20,43', ['cafe,4', 'combo1,1']],
@@ -52,6 +53,7 @@ describe('CaixaDaLanchonete', () => {
         ['combo2', 'dinheiro', 'Item extra não pode ser pedido sem o principal', ['combo2,1']],
         ['chantily com outro item', 'credito', 'Item extra não pode ser pedido sem o principal', ['chantily,1', 'sanduiche,1']],
         ['queijo com outro item', 'debito', 'Item extra não pode ser pedido sem o principal', ['cafe,1', 'queijo,1']],
+        ['extras', 'debito', 'Item extra não pode ser pedido sem o principal', ['combo1,1', 'chantily,1', 'queijo,1']],
     ])('compra %p em %p deve resultar em %p', (_, formaDePagamento, resultadoEsperado, itens) =>
         validaTeste(formaDePagamento, resultadoEsperado, itens));
 });
