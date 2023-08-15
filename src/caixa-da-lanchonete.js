@@ -57,18 +57,6 @@ class CaixaDaLanchonete {
             }
         }
 
-        if(itemExtra.includes('combo1')){
-            if(!itemExtra.includes('cafe', 'suco', 'sanduiche', 'salgado')){
-                return 'Item extra não pode ser pedido sem o principal'
-            }
-        }
-
-        if(itemExtra.includes('combo2')){
-            if(!itemExtra.includes('cafe', 'suco', 'sanduiche', 'salgado')){
-                return 'Item extra não pode ser pedido sem o principal'
-            }
-        }
-
         if (metodoDePagamento === 'dinheiro') {
             totalValor *= 0.95;
         } else if (metodoDePagamento === 'credito') {
